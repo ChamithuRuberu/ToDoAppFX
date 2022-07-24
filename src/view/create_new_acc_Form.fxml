@@ -23,13 +23,16 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Label layoutX="72.0" layoutY="152.0" prefHeight="31.0" prefWidth="76.0" text="User Name" textFill="WHITE" />
       <Label layoutX="72.0" layoutY="227.0" prefHeight="31.0" prefWidth="76.0" text="E-mail" textFill="WHITE" />
       <Label layoutX="72.0" layoutY="326.0" prefHeight="31.0" prefWidth="104.0" text="New Password" textFill="#f8f4f4" />
       <Label layoutX="72.0" layoutY="422.0" prefHeight="31.0" prefWidth="123.0" text="Confirm Password" textFill="WHITE" />
-      <PasswordField fx:id="txtnewpassword" layoutX="72.0" layoutY="365.0" onAction="#txtnewpasswordonaction" prefHeight="31.0" prefWidth="364.0" promptText="Enter The New Password" />
-      <PasswordField fx:id="txtconfirmpassword" layoutX="72.0" layoutY="453.0" onAction="#txtconfirmpasswordonaction" prefHeight="31.0" prefWidth="364.0" promptText="Confirm Password" />
+      <PasswordField fx:id="txt_New_Password" layoutX="72.0" layoutY="365.0" onAction="#txtnewpasswordonaction" prefHeight="31.0" prefWidth="364.0" promptText="Enter The New Password" />
+      <PasswordField fx:id="txt_Confirm_Password" layoutX="72.0" layoutY="453.0" onAction="#txtconfirmpasswordonaction" prefHeight="31.0" prefWidth="364.0" promptText="Confirm Password" />
       <TextField fx:id="txtusername" layoutX="72.0" layoutY="183.0" onAction="#txtusernameonaction" prefHeight="31.0" prefWidth="364.0" promptText="Enter The User Name" />
       <TextField fx:id="txtemail" layoutX="72.0" layoutY="266.0" onAction="#txtemailonaction" prefHeight="31.0" prefWidth="364.0" promptText="Enter the E-mail" />
       <Label fx:id="lblpasswordnotmatchone" layoutX="290.0" layoutY="401.0" prefHeight="21.0" prefWidth="140.0" text="Password Does Not Match" textFill="RED">
@@ -47,10 +50,14 @@
       <AmbientLight color="CHARTREUSE" lightOn="true" />
       <AmbientLight color="CHARTREUSE" layoutX="48.0" layoutY="35.0" lightOn="true" />
       <PointLight color="CHARTREUSE" layoutX="48.0" layoutY="83.0" lightOn="true" style="-fx-blend-mode: #747d8c;" />
-      <Button layoutX="64.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnBackOnaction" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #2ed573;" text="Back" textFill="WHITE">
+      <Button fx:id="BtnBackID" layoutX="64.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnBackOnaction" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #2ed573;" text="Back" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
+      <Label fx:id="LblID" layoutX="219.0" layoutY="117.0" prefHeight="21.0" prefWidth="42.0" style="-fx-background-color: white;" />
    </children>
 </AnchorPane>
