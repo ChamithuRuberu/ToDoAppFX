@@ -40,6 +40,7 @@ public class CreateNewAccController {
         txt_Confirm_Password.setDisable(true);
         btnregister.setDisable(true);
         BtnBackID.setDisable(true);
+        LblID.setText("ID");
     }
 
     public void btnaddnewuseronaction(ActionEvent actionEvent) {
