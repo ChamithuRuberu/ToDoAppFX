@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import java.lang.*?>
-<?import java.util.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -18,7 +16,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <PasswordField fx:id="txt_password_id" layoutX="128.0" layoutY="350.0" onAction="#txt_password_onaction" prefHeight="31.0" prefWidth="255.0" promptText="Enter the password" />
+      <PasswordField fx:id="txt_Password_id" layoutX="128.0" layoutY="350.0" onAction="#txt_password_onaction" prefHeight="31.0" prefWidth="255.0" promptText="Enter the password" />
       <TextField fx:id="txt_username_id" layoutX="127.0" layoutY="259.0" onAction="#txt_username_onaction" prefHeight="31.0" prefWidth="255.0" promptText="Enter the User name" />
       <Text fill="WHITE" layoutX="137.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="102.6708984375" />
       <Text fill="WHITE" layoutX="136.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" wrappingWidth="85.6708984375" />
@@ -27,7 +25,7 @@
             <Font name="System Bold" size="33.0" />
          </font>
       </Text>
-      <Text layoutX="147.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed By-Chamithu" textAlignment="CENTER" wrappingWidth="215.6708984375">
+      <Text layoutX="147.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed By-#Chamithu" textAlignment="CENTER" wrappingWidth="215.6708984375">
          <font>
             <Font size="10.0" />
          </font>

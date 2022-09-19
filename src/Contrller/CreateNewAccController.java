@@ -1,22 +1,14 @@
 package Contrller;
-
 import db.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class CreateNewAccController {
     public AnchorPane root;
@@ -75,7 +67,7 @@ public class CreateNewAccController {
 
     public void btnregonaction(ActionEvent actionEvent) {
         register();
-
+        txtusername.requestFocus();
     }
 
     public void register() {
@@ -88,6 +80,43 @@ public class CreateNewAccController {
             txt_Confirm_Password.setStyle("-fx-border-color: transparent");
             lblpasswordnotmatchone.setVisible(false);
             lblpasswordnotmatchtwo.setVisible(false);
+
+            String id = LblID.getText();
+            String username = txtusername.getText();
+            String email = txtemail.getText();
+
+            Connection connection = DBConnection.getInstance().getConnection();
+            try  {
+                PreparedStatement preparedStatement = connection.prepareStatement("insert into user values (?,?,?,?)");
+                preparedStatement.setObject(1,id);
+                preparedStatement.setObject(2,username);
+                preparedStatement.setObject(3,email);
+                preparedStatement.setObject(4,confirm_password);
+                int i = preparedStatement.executeUpdate();
+
+                if (i!=0){
+                    Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"sucsees..");
+                    alert.showAndWait();
+
+                    Parent parent=FXMLLoader.load(this.getClass().getResource("/view/LoginForm.fxml"));
+                    Scene scene=new Scene(parent);
+                    Stage primarystage= (Stage) root.getScene().getWindow();
+                    primarystage.setScene(scene);
+                    primarystage.setTitle("Login form");
+                    primarystage.centerOnScreen();
+
+                }
+                else {
+                    Alert alert=new Alert(Alert.AlertType.ERROR,"Error..");
+                    alert.showAndWait();
+                }
+            }
+            catch (SQLException throwables) {
+               throwables.printStackTrace();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
         } else {
             txt_New_Password.setStyle("-fx-border-color: red");
             txt_Confirm_Password.setStyle("-fx-border-color: red");
@@ -124,13 +153,10 @@ public class CreateNewAccController {
                     LblID.setText("U00"+intid);
                 } else if (intid<100) {
                     LblID.setText("U0"+intid);
-
                 }
                 else {
                     lblid.setText("U"+intid);
                 }
-
-
             } else {
                 LblID.setText("U001");
             }
