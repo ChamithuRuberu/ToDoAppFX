@@ -7,7 +7,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="751.0" prefWidth="1177.0" style="-fx-background-color: #2f3542;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contrller.ToDoFormController">
+<AnchorPane fx:id="root" prefHeight="751.0"
+            prefWidth="1177.0"
+            style="-fx-background-color: #2f3542;"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Contrller.ToDoFormController">
    <children>
       <Pane layoutX="14.0" layoutY="14.0" prefHeight="723.0" prefWidth="1150.0" style="-fx-border-color: black;">
          <children>
@@ -17,7 +22,7 @@
                   <Font name="Arial Black" size="38.0" />
                </font>
             </Label>
-            <TextField layoutX="402.0" layoutY="169.0" prefHeight="49.0" prefWidth="431.0" style="-fx-background-color: #dfe4ea;" />
+            <TextField fx:id="search_txt" layoutX="402.0" layoutY="169.0" prefHeight="49.0" prefWidth="431.0" style="-fx-background-color: #dfe4ea;" />
             <Button layoutX="853.0" layoutY="169.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="114.0" style="-fx-background-color: #eb4d4b;" text="Delete">
                <cursor>
                   <Cursor fx:constant="HAND" />
