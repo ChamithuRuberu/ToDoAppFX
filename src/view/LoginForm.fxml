@@ -11,7 +11,7 @@
 
 <AnchorPane id="root" fx:id="root" focusTraversable="true" prefHeight="654.0" prefWidth="509.0" style="-fx-background-color: #2f3542;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contrller.LoginFormController">
    <children>
-      <Button fx:id="txt_login_id" layoutX="127.0" layoutY="469.0" mnemonicParsing="false" onAction="#login_on_action" prefHeight="31.0" prefWidth="255.0" style="-fx-background-color: #30336b;" text="Login" textFill="WHITE">
+      <Button fx:id="txt_login_id" layoutX="164.0" layoutY="428.0" mnemonicParsing="false" onAction="#login_on_action" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: #30336b;" text="Login" textFill="WHITE">
          <font>
             <Font name="Arial Narrow Bold" size="15.0" />
          </font>
@@ -19,20 +19,20 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <PasswordField fx:id="txt_Password_id" layoutX="128.0" layoutY="350.0" onAction="#txt_password_onaction" prefHeight="31.0" prefWidth="255.0" promptText="Enter the password" />
+      <PasswordField fx:id="txt_Password_id" layoutX="124.0" layoutY="340.0" onAction="#txt_password_onaction" prefHeight="31.0" prefWidth="255.0" promptText="Enter the password" />
       <TextField fx:id="txt_username_id" layoutX="127.0" layoutY="259.0" onAction="#txt_username_onaction" prefHeight="31.0" prefWidth="255.0" promptText="Enter the User name" />
-      <Text fill="WHITE" layoutX="137.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="102.6708984375" />
+      <Text fill="WHITE" layoutX="133.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="102.6708984375" />
       <Text fill="WHITE" layoutX="136.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" wrappingWidth="85.6708984375" />
       <Text fill="WHITE" layoutX="124.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login To-Do List" textAlignment="CENTER" wrappingWidth="263.6708984375">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Text>
-      <Text layoutX="147.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed By-#Chamithu" textAlignment="CENTER" wrappingWidth="215.6708984375">
+      <Text layoutX="198.0" layoutY="636.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed By-#Chamithu" textAlignment="CENTER" wrappingWidth="113.6708984375">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Hyperlink layoutX="171.0" layoutY="516.0" onMouseClicked="#hypercreatenewaccountonmouseclick" prefHeight="29.0" prefWidth="168.0" text="Create New Account" />
+      <Hyperlink layoutX="195.0" layoutY="459.0" onMouseClicked="#hypercreatenewaccountonmouseclick" prefHeight="29.0" prefWidth="120.0" text="Create New Account" textAlignment="CENTER" />
    </children>
 </AnchorPane>
